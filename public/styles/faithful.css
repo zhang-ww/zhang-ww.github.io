@@ -1,0 +1,60 @@
+:root {
+  --background_color: #f7f1ed;
+  --color_body_text: #27273d;
+  --color_body_border: rgba(39, 39, 61, var(--border_opacity));
+  --color_body_headings: #17a584;
+  --color_border_decorative: #f7cac3;
+  --color_accent: #27273d;
+  --color_button_background: #17a584;
+  --color_button_text: #ffffff;
+  --color_navigation_background: #f7ede2;
+  --color_navigation_text: #27273d;
+  --color_search_background: #f7ede2;
+  --color_search_text: #27273d;
+  --color_footer_background: #f7cac3;
+  --color_palette_1: #f7cac3;
+  --color_palette_2: #4e5054;
+  --layout_width_content: 1920px;
+  --layout_width_entry_content: 824px;
+  --typography_size_html: 18px;
+}
+
+body.custom-background { background-color: #f7f1ed; }
+.site-title a { color: inherit; text-decoration: none; }
+.wp-block-group__inner-container { width: 100%; }
+
+/* Keep research entries compact while giving long paper titles room on desktop. */
+body.page-research { --layout_width_entry_content: 1200px; }
+.page-research .research-paper { margin-bottom: 1.75rem; }
+.page-research .research-paper .is-layout-flex { gap: 0; }
+.page-research .research-paper p { margin-top: 0; margin-bottom: 0; }
+.page-research .research-paper details { margin-top: 0; }
+
+.ngg-slideshow-static { position: relative; width: 100%; max-width: 750px; height: 500px; margin: 0 auto var(--gap); overflow: hidden; }
+.ngg-slideshow-static .ngg-gallery-slideshow-image { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; transition: opacity .45s ease; }
+.ngg-slideshow-static .ngg-gallery-slideshow-image.is-active { opacity: 1; }
+.ngg-slideshow-static img { width: auto; max-width: 100%; max-height: 480px; object-fit: contain; }
+
+.wprm-recipe-template-compact { margin: 20px auto; padding: 10px; background-color: #fafafa; color: #333; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; font-size: .9em; line-height: 1.5em; max-width: 650px; }
+.wprm-recipe-template-compact a { color: #3498db; }
+.wprm-recipe-template-compact p, .wprm-recipe-template-compact li { font-family: inherit; font-size: 1em !important; line-height: 1.5em !important; }
+.wprm-recipe-template-compact li { margin: 0 0 0 32px !important; padding: 0 !important; }
+.wprm-recipe-template-compact ol, .wprm-recipe-template-compact ul { margin: 0 !important; padding: 0 !important; }
+.wprm-recipe-template-compact .wprm-recipe-name, .wprm-recipe-template-compact .wprm-recipe-header { color: #000; font-family: inherit; line-height: 1.3em; }
+.wprm-recipe-template-compact .wprm-recipe-name { margin: 0; font-size: 1.8em; }
+.wprm-recipe-template-compact .wprm-recipe-header { margin: 1.2em 0 .5em; font-size: 1.2em; }
+.wprm-recipe-template-compact .wprm-recipe-group-name { margin: .8em 0 .2em; color: #333; font-family: inherit; font-size: 1em; }
+.wprm-recipe-template-compact .wprm-recipe-meta-container { display: table; width: 100%; margin: 10px 0; border-left: 0 !important; border-right: 0 !important; }
+.wprm-recipe-template-compact .wprm-recipe-block-container-table { display: table-cell; width: 50%; padding: 10px; text-align: center; border-top: 0 !important; border-bottom: 0 !important; }
+.wprm-recipe-template-compact .wprm-recipe-details-label { display: block; font-weight: 700; }
+.wprm-recipe-template-compact .wprm-container-float-right { float: right; text-align: right; }
+.wprm-recipe-template-compact .wprm-recipe-print { display: inline-flex; align-items: center; gap: 5px; text-decoration: none; border: 1px solid; }
+.wprm-recipe-template-compact .wprm-recipe-equipment-container,
+.wprm-recipe-template-compact .wprm-recipe-ingredients-container,
+.wprm-recipe-template-compact .wprm-recipe-instructions-container,
+.wprm-recipe-template-compact .wprm-recipe-notes-container { margin-top: 1.5em; }
+.wprm-spacer { height: 10px; }
+@media (max-width: 670px) {
+  .ngg-slideshow-static { height: 65vw; max-height: 500px; min-height: 280px; }
+  .ngg-slideshow-static img { max-height: calc(65vw - 20px); }
+}

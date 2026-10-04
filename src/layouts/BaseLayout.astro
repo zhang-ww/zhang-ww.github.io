@@ -1,0 +1,149 @@
+---
+interface Props {
+  pageTitle?: string;
+  heading: string;
+  description?: string;
+  current: 'home' | 'research' | 'fun' | 'other';
+  hasThumbnail?: boolean;
+}
+
+const {
+  pageTitle,
+  heading,
+  description = 'Whitney Zhang, PhD candidate in Economics at MIT.',
+  current,
+  hasThumbnail = false,
+} = Astro.props;
+
+const title = pageTitle ? `${pageTitle} – whitney` : 'whitney';
+const bodyClasses = [
+  'custom-background',
+  'fpt-template-michelle',
+  'has-navigation-mobile',
+  'has-primary-title',
+  'has-search-form-modal',
+  'has-site-title-last',
+  'has-sticky-header-mobile',
+  current === 'home' ? 'home' : '',
+  current === 'research' ? 'page-research' : '',
+  'is-singular',
+  'page',
+  'page-template-default',
+  'wp-embed-responsive',
+  hasThumbnail ? 'has-post-thumbnail' : '',
+].filter(Boolean).join(' ');
+---
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/wordpress-blocks.css" />
+    <link rel="stylesheet" href="/styles/michelle-global.css" />
+    <link rel="stylesheet" href="/styles/michelle-content.css" />
+    <link rel="stylesheet" href="/styles/michelle-blocks.css" />
+    <link rel="stylesheet" href="/styles/recipe-maker.css" />
+    <link rel="stylesheet" href="/styles/faithful.css" />
+    <title>{title}</title>
+  </head>
+  <body class={bodyClasses}>
+    <a id="top"></a>
+    <div id="page" class="site">
+      <nav class="menu-skip-links" aria-label="Skip links">
+        <ul>
+          <li><a class="skip-link screen-reader-text" href="#site-navigation">Skip to main navigation</a></li>
+          <li><a class="skip-link screen-reader-text" href="#content">Skip to main content</a></li>
+          <li><a class="skip-link screen-reader-text" href="#colophon">Skip to footer</a></li>
+        </ul>
+      </nav>
+
+      <header id="masthead" class="site-header">
+        <div class="site-header-section">
+          <div class="site-header-content">
+            <div class="site-branding">
+              <div class="site-branding-text"><p class="site-title"><a href="/">whitney</a></p></div>
+            </div>
+            <nav id="site-navigation" class="main-navigation" aria-label="Main menu">
+              <button id="menu-toggle" class="menu-toggle" aria-controls="menu-primary" aria-expanded="false">
+                <svg class="svg-icon menu-open" width="1em" aria-hidden="true" viewBox="0 0 16 16"><path d="M0 2v2h16V2H0zm0 7h12V7H0v2zm0 5h14v-2H0v2z" /></svg>
+                <svg class="svg-icon menu-close" width="1em" aria-hidden="true" viewBox="0 0 16 16"><polygon points="14.7,2.7 13.3,1.3 8,6.6 2.7,1.3 1.3,2.7 6.6,8 1.3,13.3 2.7,14.7 8,9.4 13.3,14.7 14.7,13.3 9.4,8" /></svg>
+                <span class="screen-reader-text">Menu</span>
+              </button>
+              <div id="site-navigation-container" class="main-navigation-container">
+                <ul id="menu-primary" class="menu menu-primary toggle-sub-menus">
+                  <li class:list={['menu-item', 'menu-item-is-depth-0', current === 'home' && 'current-menu-item']}><a href="/" aria-current={current === 'home' ? 'page' : undefined}>About Me</a></li>
+                  <li class:list={['menu-item', 'menu-item-is-depth-0', current === 'research' && 'current-menu-item']}><a href="/research/" aria-current={current === 'research' ? 'page' : undefined}>Research</a></li>
+                  <li class:list={['menu-item', 'menu-item-is-depth-0', current === 'fun' && 'current-menu-item']}><a href="/fun/" aria-current={current === 'fun' ? 'page' : undefined}>Fun</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div id="search-form-modal" class="modal-search-container">
+              <button id="modal-search-toggle" class="modal-search-toggle" aria-controls="modal-search" aria-expanded="false">
+                <svg class="svg-icon modal-search-open" width="1.5em" aria-hidden="true" viewBox="0 0 16 16"><path d="m14.7 13.3-3.7-3.7c.6-.9 1-2 1-3.1C12 3.5 9.5 1 6.5 1S1 3.5 1 6.5 3.5 12 6.5 12c1.2 0 2.2-.4 3.1-1l3.7 3.7 1.4-1.4zM2.5 6.5c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z" /></svg>
+                <svg class="svg-icon modal-search-close" width="1.5em" aria-hidden="true" viewBox="0 0 16 16"><polygon points="14.7,2.7 13.3,1.3 8,6.6 2.7,1.3 1.3,2.7 6.6,8 1.3,13.3 2.7,14.7 8,9.4 13.3,14.7 14.7,13.3 9.4,8" /></svg>
+                <span class="screen-reader-text">Toggle search form</span>
+              </button>
+              <form id="modal-search" role="search" class="search-form" action="https://www.google.com/search" method="get">
+                <label><span class="screen-reader-text">Search for:</span><input type="search" class="search-field" placeholder="Search …" name="q" /></label>
+                <input type="hidden" name="as_sitesearch" value="whitneyzhang.com" />
+                <input type="submit" class="search-submit" value="Search" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div id="content" class="site-content">
+        <div class="content-area">
+          <main id="main" class="site-main">
+            <article class="page type-page status-publish hentry entry entry-type-page">
+              <header id="page-header" class="entry-header page-header">
+                <div class="page-header-content"><div class="entry-header-text page-header-text"><h1 class="entry-title page-title">{heading}</h1></div></div>
+              </header>
+              <div class="entry-content entry-content-singular"><slot /></div>
+              <div class="entry-skip-links"><a class="skip-link screen-reader-text" href="#site-navigation">Skip back to main navigation</a></div>
+            </article>
+          </main>
+        </div>
+      </div>
+
+      <footer id="colophon" class="site-footer">
+        <div class="site-info-section site-footer-section">
+          <div class="site-info-content site-footer-content">
+            <div class="site-info">
+              <span class="site-info-item"><a href="#top" class="back-to-top"><svg class="svg-icon" width="3em" aria-hidden="true" viewBox="0 0 16 16"><polygon points="8,4.6 1.3,11.3 2.7,12.7 8,7.4 13.3,12.7 14.7,11.3" /></svg><span class="screen-reader-text">Back to top of the page</span></a></span>
+              <span class="site-info-item">© 2026 <a href="/"><strong>whitney</strong></a><span class="sep"> • </span>Built with <a href="https://astro.build/">Astro</a>, based on <a href="https://www.webmandesign.eu/portfolio/michelle-wordpress-theme/">Michelle</a>.</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script is:inline>
+      const nav = document.getElementById('site-navigation');
+      const menuButton = document.getElementById('menu-toggle');
+      menuButton?.addEventListener('click', () => {
+        nav?.classList.toggle('toggled');
+        const open = nav?.classList.contains('toggled') || false;
+        document.body.classList.toggle('has-navigation-toggled', open);
+        document.documentElement.classList.toggle('lock-scroll', open);
+        menuButton.setAttribute('aria-expanded', String(open));
+      });
+      const search = document.getElementById('search-form-modal');
+      const searchButton = document.getElementById('modal-search-toggle');
+      searchButton?.addEventListener('click', () => {
+        search?.classList.toggle('toggled');
+        const open = search?.classList.contains('toggled') || false;
+        searchButton.setAttribute('aria-expanded', String(open));
+        if (open) search?.querySelector('input[type="search"]')?.focus();
+      });
+    </script>
+  </body>
+</html>

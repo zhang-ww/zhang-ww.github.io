@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const photos = ['IMG_3408.jpg','IMG_3421.jpg','IMG_3684.jpg','IMG_3666.jpg','IMG_3710.jpg','IMG_3712.jpg','IMG_3738.jpg','IMG_3702.jpg','IMG_4395.jpg','IMG_4536.jpg','IMG_5108.jpg'];
+---
+
+<BaseLayout pageTitle="Fun" heading="Fun" current="fun" description="Indigo the blue heeler and other things Whitney Zhang does.">
+  <p class="has-normal-font-size"><strong>Indigo</strong><br />My blue heeler pup 💙</p>
+
+  <div class="ngg-galleryoverview ngg-slideshow ngg-slideshow-static" aria-label="Photos of Indigo">
+    {photos.map((photo, index) => (
+      <div class:list={['ngg-gallery-slideshow-image', index === 0 && 'is-active']}>
+        <a href={`/gallery/${photo}`}><img src={`/gallery/${photo}`} alt={`Indigo, photo ${index + 1}`} loading={index > 1 ? 'lazy' : 'eager'} /></a>
+      </div>
+    ))}
+  </div>
+
+  <p><strong>Other things I do</strong><br />– Mentor for the <a href="https://bcnc.net/support-cap">Boston Chinatown Neighborhood Center College Access Program</a><br />– <a href="https://gcf.mit.edu/">MIT Graduate Christian Fellowship</a><br />– Dragon Boat with <a href="https://harvarddb.com/">Harvard Engine 9</a>  </p>
+  <p><strong><strong>The Tech</strong><br /></strong>I was a student journalist for three years in undergrad. You can read my old stuff <a href="https://thetech.com/authors/whitney-zhang">here</a>. </p>
+  <p><strong>dormspam-the-game </strong><br />I co-produced <a href="https://dormspam-the-game.mit.edu/">this game series</a> with padajar. The series included five online games and a live virtual game show. Read our blog about it <a href="https://mitadmissions.org/blogs/entry/dormspam-the-game-part-3/">here</a> 🙂</p>
+
+  <script is:inline>
+    const slides = [...document.querySelectorAll('.ngg-slideshow-static .ngg-gallery-slideshow-image')];
+    let slide = 0;
+    if (slides.length > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.setInterval(() => {
+        slides[slide].classList.remove('is-active');
+        slide = (slide + 1) % slides.length;
+        slides[slide].classList.add('is-active');
+      }, 2000);
+    }
+  </script>
+</BaseLayout>
