@@ -23,12 +23,109 @@ body.custom-background { background-color: #f7f1ed; }
 .site-title a { color: inherit; text-decoration: none; }
 .wp-block-group__inner-container { width: 100%; }
 
-/* Keep research entries compact while giving long paper titles room on desktop. */
-body.page-research { --layout_width_entry_content: 1200px; }
-.page-research .research-paper { margin-bottom: 1.75rem; }
-.page-research .research-paper .is-layout-flex { gap: 0; }
-.page-research .research-paper p { margin-top: 0; margin-bottom: 0; }
-.page-research .research-paper details { margin-top: 0; }
+/* Shared Markdown research list. Paper order follows src/content/research.md. */
+body.page-research { --layout_width_entry_content: 1040px; }
+
+.research-content h2 {
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.45rem;
+}
+
+.research-content h2:first-child { margin-top: 0; }
+
+.research-content h3 {
+  margin-top: 2rem;
+  margin-bottom: .2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.research-content h3 + p,
+.research-content h3 + p + p { margin-top: 0; }
+
+.research-content p {
+  margin-top: .4rem;
+  margin-bottom: .4rem;
+}
+
+.research-content details {
+  margin-top: .55rem;
+  font-size: .92rem;
+}
+
+.research-content summary {
+  width: max-content;
+  cursor: pointer;
+  color: var(--color_body_headings);
+  font-weight: 700;
+}
+
+.research-content details p {
+  max-width: 72ch;
+  margin-top: .75rem;
+}
+
+/* Homepage: compact profile on the left, full research list on the right. */
+body.home { --layout_width_entry_content: 1240px; }
+body.home .page-header { display: none; }
+
+.home-grid {
+  display: grid;
+  grid-template-columns: minmax(210px, 260px) minmax(0, 1fr);
+  gap: clamp(3rem, 7vw, 6.5rem);
+  align-items: start;
+}
+
+.home-profile {
+  position: sticky;
+  top: 2rem;
+  font-size: .88rem;
+  line-height: 1.65;
+}
+
+.home-headshot {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 1.4rem;
+}
+
+.home-profile h1 {
+  margin: 0 0 1rem;
+  font-size: 1.65rem;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.home-profile p { margin: 0 0 1rem; }
+.home-contact { font-weight: 700; }
+
+.home-research > h2 {
+  margin: 0 0 2rem;
+  font-size: 2.15rem;
+}
+
+.home-research .research-content { font-size: .92rem; }
+
+@media (max-width: 780px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .home-profile {
+    position: static;
+    max-width: 34rem;
+    font-size: .94rem;
+  }
+
+  .home-headshot { width: 150px; }
+}
 
 .ngg-slideshow-static { position: relative; width: 100%; max-width: 750px; height: 500px; margin: 0 auto var(--gap); overflow: hidden; }
 .ngg-slideshow-static .ngg-gallery-slideshow-image { position: absolute; inset: 0; display: grid; place-items: center; opacity: 0; transition: opacity .45s ease; }
