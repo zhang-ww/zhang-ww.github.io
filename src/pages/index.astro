@@ -6,6 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout heading="Whitney Zhang" current="home" hasThumbnail>
   <div class="home-grid">
     <aside class="home-profile" aria-labelledby="profile-heading">
+      <h1 id="profile-heading">Hi, I’m Whitney</h1>
       <img
         class="home-headshot"
         src="/images/whitney-zhang.jpeg"
@@ -13,13 +14,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         width="843"
         height="1024"
       />
-      <h1 id="profile-heading">Hi, I’m Whitney</h1>
-      <p>I am a PhD candidate at <a href="https://economics.mit.edu/">MIT Economics</a> interested in how <a href="https://news.mit.edu/2025/improving-workplace-future-whitney-zhang-0924">technologies and organizational decisions shape labor markets</a>. I am generously funded through the <a href="https://www.nsfgrfp.org">National Science Foundation Graduate Research Fellowship Program</a>. <strong>I am on the AY2026–27 job market.</strong></p>
-      <p class="home-contact"><a href="mailto:zhangww@mit.edu">zhangww@mit.edu</a></p>
+      <p>I am a PhD candidate at <a href="https://economics.mit.edu/">MIT Economics</a> interested in how <a href="https://news.mit.edu/2025/improving-workplace-future-whitney-zhang-0924">technologies and organizational decisions shape labor markets</a>. I am generously funded through the <a href="https://www.nsfgrfp.org">National Science Foundation Graduate Research Fellowship Program</a>.</p>
+      <p class="job-market"><strong>I am on the AY2026–27 job market.</strong></p>
+      <div class="profile-actions">
+        <a class="contact-button" href="https://economics.mit.edu/sites/default/files/2026-10/Zhang_CV_0.pdf">CV</a>
+        <a class="contact-button" href="mailto:zhangww@mit.edu">Contact Me</a>
+      </div>
     </aside>
 
-    <section class="home-research" aria-labelledby="research-heading">
-      <h2 id="research-heading">Research</h2>
+    <section class="home-research" aria-label="Research">
       <ResearchContent />
     </section>
   </div>

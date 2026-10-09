@@ -24,25 +24,31 @@ body.custom-background { background-color: #f7f1ed; }
 .wp-block-group__inner-container { width: 100%; }
 
 /* Shared Markdown research list. Paper order follows src/content/research.md. */
-body.page-research { --layout_width_entry_content: 1040px; }
+body.page-research { --layout_width_entry_content: 1180px; }
 
 .research-content h2 {
-  margin-top: 3.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: .8rem;
   font-size: 1.45rem;
 }
 
 .research-content h2:first-child { margin-top: 0; }
+.page-research .research-content h2:first-child { display: none; }
 
 .research-content h3 {
-  margin-top: 2rem;
-  margin-bottom: .2rem;
+  margin-top: 1.2rem;
+  margin-bottom: .15rem;
   font-family: inherit;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.45;
   letter-spacing: 0;
   text-transform: none;
+  color: var(--color_body_text);
 }
+
+.research-content h3 strong { font-weight: 700; }
+.research-content h3 a { color: inherit; }
 
 .research-content h3 + p,
 .research-content h3 + p + p { margin-top: 0; }
@@ -53,14 +59,14 @@ body.page-research { --layout_width_entry_content: 1040px; }
 }
 
 .research-content details {
-  margin-top: .55rem;
+  margin-top: .35rem;
   font-size: .92rem;
 }
 
 .research-content summary {
   width: max-content;
   cursor: pointer;
-  color: var(--color_body_headings);
+  color: var(--color_body_text);
   font-weight: 700;
 }
 
@@ -70,47 +76,78 @@ body.page-research { --layout_width_entry_content: 1040px; }
 }
 
 /* Homepage: compact profile on the left, full research list on the right. */
-body.home { --layout_width_entry_content: 1240px; }
+body.home { --layout_width_entry_content: 1380px; }
 body.home .page-header { display: none; }
+body.home .content-area {
+  padding-top: clamp(1.5rem, 3vw, 2.75rem);
+}
 
 .home-grid {
   display: grid;
-  grid-template-columns: minmax(210px, 260px) minmax(0, 1fr);
-  gap: clamp(3rem, 7vw, 6.5rem);
+  grid-template-columns: minmax(320px, 370px) minmax(0, 1fr);
+  gap: clamp(2.5rem, 5vw, 5rem);
   align-items: start;
 }
 
 .home-profile {
   position: sticky;
   top: 2rem;
-  font-size: .88rem;
+  font-size: .94rem;
   line-height: 1.65;
 }
 
 .home-headshot {
   display: block;
-  width: 180px;
+  width: 245px;
   max-width: 100%;
   height: auto;
   margin: 0 0 1.4rem;
 }
 
 .home-profile h1 {
-  margin: 0 0 1rem;
-  font-size: 1.65rem;
+  margin: 0 0 1.2rem;
+  font-size: 1.8rem;
   line-height: 1.15;
   text-transform: none;
 }
 
 .home-profile p { margin: 0 0 1rem; }
-.home-contact { font-weight: 700; }
 
-.home-research > h2 {
-  margin: 0 0 2rem;
-  font-size: 2.15rem;
+.job-market { white-space: nowrap; }
+
+.profile-actions {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
 }
 
-.home-research .research-content { font-size: .92rem; }
+.contact-button {
+  display: inline-block;
+  padding: .48rem .8rem;
+  color: var(--color_button_text);
+  background: var(--color_button_background);
+  border-radius: 2px;
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.contact-button:focus,
+.contact-button:hover {
+  color: var(--color_button_text);
+  filter: brightness(.9);
+}
+
+.home-research .research-content { font-size: .98rem; }
+.home-research .research-content h2 { font-size: 1.55rem; }
+.home-research .research-content h3 { font-size: 1.05rem; }
+
+/* Older work remains on /research/ but is omitted from the homepage summary. */
+.home .research-content #older-work,
+.home .research-content #older-work ~ * { display: none; }
 
 @media (max-width: 780px) {
   .home-grid {
@@ -121,10 +158,11 @@ body.home .page-header { display: none; }
   .home-profile {
     position: static;
     max-width: 34rem;
-    font-size: .94rem;
+    font-size: .98rem;
   }
 
-  .home-headshot { width: 150px; }
+  .home-headshot { width: 195px; }
+  .job-market { white-space: normal; }
 }
 
 .ngg-slideshow-static { position: relative; width: 100%; max-width: 750px; height: 500px; margin: 0 auto var(--gap); overflow: hidden; }

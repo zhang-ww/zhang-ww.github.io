@@ -1,9 +1,19 @@
-## Publications
+## Job Market Paper
 
-### Interpreting TSLS Estimators in Information Provision Experiments
+### **[Adversarial Hiring,](https://drive.google.com/file/d/1ZPVd6xNJ5fmGWNWShzdBnYE0TZsAcgb7/view?usp=drive_link)** with Arjun Ramani
 
-with Vod Vilfort  
-*[AER: Insights (2025)](https://www.aeaweb.org/articles?id=10.1257/aeri.20240353)*
+<details>
+<summary>Abstract</summary>
+
+Worker and firm technology choices increasingly intermediate the hiring process, yet little is known about their equilibrium consequences. We model screening as a game in which technology choices alter the information environment and firms endogenously set screening policies. The model distinguishes technologies that enhance the informativeness of applicant signals from those that erode them. We study two such technologies, applicant adoption of generative AI and firm adoption of automated assessments. We construct a new panel of interview processes tied to hiring outcomes covering nearly 10,000 firms comprising 12% of US employment. Tracking changes in workers' resumes over time, we find that AI-induced text homogenization erodes signal. In occupations with fewer AI-proof signals, firms respond by relying more on experience and credentials, sourcing candidates more through referrals and recruiters, intensifying interviews, and ultimately reducing the quantity and diversity of entry-level hires. Conversely, earlier firm adoption of automated assessments enhanced signals, increasing hiring and improving diversity on some dimensions. Our results offer a unified account of how technology has changed hiring across two eras—including explaining one-quarter of the relative slowdown in entry-level hiring since 2022—and show that technology can reduce welfare in adversarial settings.
+
+</details>
+
+## Research
+
+### **[Interpreting TSLS Estimators in Information Provision Experiments,](https://www.aeaweb.org/articles?id=10.1257/aeri.20240353)** with Vod Vilfort
+
+*AER: Insights* (2025)
 
 <details>
 <summary>Abstract</summary>
@@ -12,10 +22,9 @@ To estimate the causal effects of beliefs on actions, researchers often conduct 
 
 </details>
 
-### Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence
+### **[Experimental Evidence on the Productivity Effects of Generative Artificial Intelligence,](https://www.science.org/doi/10.1126/science.adh2586)** with Shakked Noy
 
-with Shakked Noy  
-*[Science (2023)](https://www.science.org/doi/10.1126/science.adh2586)* · *[Tweet](https://twitter.com/whitneywzhang/status/1679567713348485125?s=20)*
+*Science* (2023) · [Tweet](https://twitter.com/whitneywzhang/status/1679567713348485125?s=20)
 
 *Press:* [MIT News](https://news.mit.edu/2023/study-finds-chatgpt-boosts-worker-productivity-writing-0714) · [Nature](https://www.nature.com/articles/d41586-023-02270-9) · [NYT](https://www.nytimes.com/2023/03/28/business/economy/jobs-ai-artificial-intelligence-chatgpt.html) · [TechReview](https://www.technologyreview.com/2023/03/25/1070275/chatgpt-revolutionize-economy-decide-what-looks-like/) · [Vox](https://www.vox.com/future-perfect/2023/3/14/23637633/chatgpt-bing-generative-ai-ethan-lilach-mollick) · [Wired](https://www.wired.com/story/yes-chatgpt-is-coming-for-your-office-job/) · [WSJ 1](https://www.wsj.com/articles/the-jobs-most-exposed-to-chatgpt-e7ceebf0) · [WSJ 2](https://www.wsj.com/articles/the-robots-have-finally-come-for-my-job-34a69146)
 
@@ -26,9 +35,9 @@ We examine the productivity effects of a generative artificial intelligence tech
 
 </details>
 
-### Improving Local Labor Market Definitions Using the Louvain Community Detection Algorithm
+### **[Improving Local Labor Market Definitions Using the Louvain Community Detection Algorithm](https://www.sciencedirect.com/science/article/abs/pii/S0165176522003093)**
 
-*[Economics Letters (2022)](https://www.sciencedirect.com/science/article/abs/pii/S0165176522003093)*
+*Economics Letters* (2022)
 
 <details>
 <summary>Abstract</summary>
@@ -37,18 +46,11 @@ Well-defined commuting zones are essential for accurate research on US local lab
 
 </details>
 
-## Working Papers
-
-### Adversarial Hiring
-
-with Arjun Ramani · **Job Market Paper**  
-Draft available upon request.
-
 ## Older Work
 
-### Effect of Public Library Access on K-12 English Language Arts Performance
+### **Effect of Public Library Access on K-12 English Language Arts Performance**
 
-*MIT Undergraduate Economic Journal (2021)*
+*MIT Undergraduate Economic Journal* (2021)
 
 <details>
 <summary>Abstract</summary>
@@ -57,9 +59,9 @@ Does public library access affect K-12 students’ English Language Arts perform
 
 </details>
 
-### Wirtschaftswunder: Incentives Aligned for Growth — A Comparative Study of West Germany and the UK 1950–1980
+### **Wirtschaftswunder: Incentives Aligned for Growth — A Comparative Study of West Germany and the UK 1950–1980**
 
-*MIT Undergraduate Economic Journal (2020)*
+*MIT Undergraduate Economic Journal* (2020)
 
 <details>
 <summary>Abstract</summary>
