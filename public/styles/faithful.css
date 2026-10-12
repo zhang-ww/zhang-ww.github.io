@@ -112,6 +112,7 @@ body.home .content-area {
 }
 
 .home-profile p { margin: 0 0 1rem; }
+.home-bio { max-width: 20rem; }
 
 .job-market { white-space: nowrap; }
 
