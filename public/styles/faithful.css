@@ -148,12 +148,15 @@ body.home .content-area {
 .icon-button {
   width: 2rem;
   padding: 0;
+  color: #fff;
 }
+
+.icon-button:visited { color: #fff; }
 
 .icon-button svg {
   width: 1rem;
   height: 1rem;
-  fill: currentColor;
+  fill: #fff;
 }
 
 .home-research .research-content { font-size: .98rem; }
