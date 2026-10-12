@@ -26,7 +26,7 @@ To estimate the causal effects of beliefs on actions, researchers often conduct 
 
 *Science* (2023) · [Tweet](https://twitter.com/whitneywzhang/status/1679567713348485125?s=20)
 
-*Press:* [MIT News](https://news.mit.edu/2023/study-finds-chatgpt-boosts-worker-productivity-writing-0714) · [Nature](https://www.nature.com/articles/d41586-023-02270-9) · [NYT](https://www.nytimes.com/2023/03/28/business/economy/jobs-ai-artificial-intelligence-chatgpt.html) · [TechReview](https://www.technologyreview.com/2023/03/25/1070275/chatgpt-revolutionize-economy-decide-what-looks-like/) · [Vox](https://www.vox.com/future-perfect/2023/3/14/23637633/chatgpt-bing-generative-ai-ethan-lilach-mollick) · [Wired](https://www.wired.com/story/yes-chatgpt-is-coming-for-your-office-job/) · [WSJ 1](https://www.wsj.com/articles/the-jobs-most-exposed-to-chatgpt-e7ceebf0) · [WSJ 2](https://www.wsj.com/articles/the-robots-have-finally-come-for-my-job-34a69146)
+*Press:* *[MIT News](https://news.mit.edu/2023/study-finds-chatgpt-boosts-worker-productivity-writing-0714)* · *[Nature](https://www.nature.com/articles/d41586-023-02270-9)* · *[NYT](https://www.nytimes.com/2023/03/28/business/economy/jobs-ai-artificial-intelligence-chatgpt.html)* · *[TechReview](https://www.technologyreview.com/2023/03/25/1070275/chatgpt-revolutionize-economy-decide-what-looks-like/)* · *[Vox](https://www.vox.com/future-perfect/2023/3/14/23637633/chatgpt-bing-generative-ai-ethan-lilach-mollick)* · *[Wired](https://www.wired.com/story/yes-chatgpt-is-coming-for-your-office-job/)* · *[WSJ 1](https://www.wsj.com/articles/the-jobs-most-exposed-to-chatgpt-e7ceebf0)* · *[WSJ 2](https://www.wsj.com/articles/the-robots-have-finally-come-for-my-job-34a69146)*
 
 <details>
 <summary>Abstract</summary>
