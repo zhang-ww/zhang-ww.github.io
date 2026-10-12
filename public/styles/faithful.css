@@ -123,8 +123,11 @@ body.home .content-area {
 }
 
 .contact-button {
-  display: inline-block;
-  padding: .48rem .8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0 .8rem;
   color: var(--color_button_text);
   background: var(--color_button_background);
   border-radius: 2px;
@@ -140,6 +143,17 @@ body.home .content-area {
 .contact-button:hover {
   color: var(--color_button_text);
   filter: brightness(.9);
+}
+
+.icon-button {
+  width: 2rem;
+  padding: 0;
+}
+
+.icon-button svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
 }
 
 .home-research .research-content { font-size: .98rem; }
